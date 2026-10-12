@@ -1,44 +1,46 @@
 # Lesson Motion Studio
 
-Reusable educational video skill for whiteboard animation in Arabic or English
-
-## Download and use
-
-Download `lesson-motion-studio.zip` from this repository and extract it
-The archive contains the complete `lesson-motion-studio` skill folder
-Load that folder with the skill mechanism supported by your assistant environment
-Then provide the lesson topic or screenshot and answer the missing intake questions
+A reusable educational video skill for whiteboard animation in Arabic or English
 
 ## Features
 
-- Grade or age country learning goal duration language and video orientation intake
-- Arabic or English narration and age appropriate explanations
-- Landscape 16:9 or portrait 9:16
-- Cairo typography with correct Arabic RTL and English LTR
-- Whiteboard illustrations and progressive pen writing
-- Circles arrows and highlighting tied to the explanation
-- Social and cultural adaptation based on the country without stereotypes
-- Retrieval question with a thinking interval before the answer
-- MP4 export and explicit content visual audio and timing checks
+- Intake covering age or grade country learning goal duration language and landscape or portrait orientation
+- Cairo typography with Arabic RTL and English LTR
+- Detailed whiteboard illustrations with progressive pen writing circles arrows and highlighting
+- Age appropriate explanations and country sensitive examples
+- Narration based scene timing and a retrieval question with a thinking interval
+- MP4 delivery and explicit quality checks
 
-## Archive contents
+## Contents
 
-- SKILL.md with the full workflow instructions
-- agents/openai.yaml
-- references/style-and-subjects.md
-- references/timeline.md
-- references/whiteboard.md
-- scripts/validate_timeline.py
-- scripts/encode_video.py
-- Cairo fonts with their Open Font License
-- Skill icon
+The editable source of truth is in [`skills/lesson-motion-studio`](skills/lesson-motion-studio)
+It includes `SKILL.md` references Cairo fonts with their OFL license and timeline validation and encoding scripts
 
-## Requirements and limits
+## Requirements
 
-Use an assistant environment supporting skills image generation speech generation and local code execution
-The helper scripts require Python Pillow ffmpeg and ffprobe
+Use an assistant environment that supports skills image generation speech generation and local code execution
+The bundled scripts require Python Pillow ffmpeg and ffprobe
 This is an assistant workflow with validation and encoding helpers rather than a standalone automatic video renderer
-The host environment implements scene rendering and chooses available media tools
-Do not treat unperformed full listening or motion review as passed
+The host environment selects and implements the scene rendering and speech tools
 
-The bundled Cairo font license applies to those fonts
+## Use
+
+Load or install `skills/lesson-motion-studio` using the skill mechanism supported by your assistant
+Then provide the lesson topic or screenshot and answer any missing intake questions
+Do not treat unperformed listening or visual checks as passed
+
+## Edit and update
+
+Edit files directly in `skills/lesson-motion-studio` using GitHub's file editor or clone this repository locally
+
+```bash
+git clone https://github.com/shariefabdelmonem-netizen/lesson-motion-studio.git
+cd lesson-motion-studio
+```
+
+Commit source changes normally and use `git pull` to retrieve updates
+No re-zipping or re-uploading is needed for future edits
+
+The root `lesson-motion-studio.zip` is an optional original snapshot and is not automatically updated
+Use the source folder for the current version
+GitHub's Code → Download ZIP downloads the current repository including its source files
