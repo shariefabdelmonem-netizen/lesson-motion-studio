@@ -54,7 +54,8 @@ Reveal actual shaped glyph strokes in reading direction and retain connected for
 Use LTR for English and mathematical expressions where needed; explicitly compose mixed runs so numbers, units, operators and parentheses retain meaning.
 Do not reverse an equation as a side effect of applying RTL to its enclosing sentence.
 Preserve text correctness over simulated handwriting, but do not label a fade or rectangular wipe as pen writing.
-Keep static interface headings distinct from animated teaching words; hold finished text for reading.
+Draw all visible headings and labels on first appearance, including interface-like scene labels; hold finished text for reading.
+Reuse previously drawn elements without requiring repeated drawing on every frame or scene.
 
 ## Explanatory marks and motion
 
@@ -89,3 +90,17 @@ Record which story event motivates each teaching step and verify this link in ex
 Do not show or narrate the user's name, signature, job title or logo by default.
 Remove inherited template credits and end cards when reusing an older project.
 Only add branding when explicitly requested for the current output; inspect the actual beginning, ending and captions for accidental carryover.
+
+## All-element stroke coverage gate
+
+Every visible semantic element must have a real stroke-drawing sequence on its first appearance: characters, faces, clothing, plants, fences, icons, exact diagrams, titles, labels, numbers, equations and explanatory marks.
+Do not exempt supporting illustrations or introduce completed characters beside an animated main diagram.
+Keep a per-element manifest with ink paths, reveal ordering, start/end times, outline completion, color-fill timing and exported review evidence.
+Trace ink paths with a single pen endpoint and lift it between disconnected paths. Reveal flat fills only after the corresponding outline.
+A slide-in, fade-in, scale-up or rectangular wipe never satisfies this gate.
+A clean background may stay static. A finished element may hold, move or carry over once its first drawing has been shown.
+Use a wide tracked marker path for highlights instead of instant colored boxes.
+Inspect start, mid-stroke and completion frames for each element; do not infer complete coverage from the main diagram.
+Fail all_elements_hand_drawn when any new element appears completed without drawing; use not_checked when evidence is absent.
+Reduce detail or element count to fit the lesson duration instead of skipping the stroke sequence.
+Do not claim complete hand-drawn coverage before every manifest entry passes.
