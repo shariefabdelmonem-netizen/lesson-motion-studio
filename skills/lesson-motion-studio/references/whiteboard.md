@@ -15,7 +15,10 @@ Use light paper texture or hatching only when it remains unobtrusive at the fina
 ## Illustrations, characters and continuity
 
 Use finished illustrative forms with clear silhouettes, controlled internal details and consistent line weight.
-Use expressive clothed characters when a person or action explains the lesson; do not add people to every diagram.
+Use slightly childlike expressive characters, rounded silhouettes and friendly faces when a person or action explains the lesson.
+Scale the childlike treatment to the learner: more playful for primary learners, restrained and respectful for teenagers.
+Avoid baby proportions, excessive cuteness, toy-like math symbols or a childish narrator tone for older students.
+Keep characters away from exact diagrams while measurements, operators and relations are being explained.
 Avoid stick figures as the default and avoid adding detail that obscures the teaching relation.
 Design simple proportional faces with brows, eyes, nose and mouth; change expression or pose only for a relevant event.
 Keep hands, clothing, hair and body proportions coherent; do not force hair, skin, dress or gender appearance from a country stereotype.
@@ -71,3 +74,18 @@ Check that the concrete example is visible, each asset supports the learning obj
 Check marks identify the right word, result or region and do not imply an answer too early.
 Use pass, fail, not_checked, or not_applicable with a concrete reason and evidence in qa.json.
 Do not claim finished visual or audio review from a storyboard, configuration or static-frame inspection alone.
+
+## Storytelling and unbranded delivery
+
+Build a compact educational story rather than an unrelated illustrated introduction followed by a lecture.
+Use a familiar situation, one clear challenge, an observable discovery and a resolution that depends on the target concept.
+Carry the same character, object and setting into the explanation and application where useful.
+Example for perimeter: a pupil plans a fence for a school garden, first notices four sides, measures them, adds the lengths and obtains the required fence length.
+Keep the mathematical boundary on a consistent scale and separate perimeter from planted area.
+Use a new near-transfer challenge for the final quiz and retain the real silent thinking interval.
+Do not add drama, extra characters or conversations that crowd out the learning objective.
+Use one narrator unless the user explicitly asks for additional voices.
+Record which story event motivates each teaching step and verify this link in exported frames.
+Do not show or narrate the user's name, signature, job title or logo by default.
+Remove inherited template credits and end cards when reusing an older project.
+Only add branding when explicitly requested for the current output; inspect the actual beginning, ending and captions for accidental carryover.
