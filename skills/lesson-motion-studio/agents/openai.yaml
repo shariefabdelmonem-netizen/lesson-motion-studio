@@ -1,0 +1,15 @@
+interface:
+  display_name: Lesson Motion Studio
+  short_description: Whiteboard lesson videos in Arabic or English
+  default_prompt: Use $lesson-motion-studio to create a whiteboard animation lesson
+    video from this topic in my chosen language and ask only for missing age goal
+    duration language and landscape or portrait orientation details
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
