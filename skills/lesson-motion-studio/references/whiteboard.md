@@ -2,15 +2,15 @@
 
 ## Art direction and palette
 
-Use a clean warm cream canvas (#FAF7F0) and charcoal outlines (#263238).
+Use a clean warm cream canvas (#FAF7F0) and dark graphite-pencil outlines (#263238).
 Combine precise educational relationships with polished hand-drawn editorial illustrations.
-Use two to four flat colors per scene in addition to outlines and background; do not use the whole palette at once.
+Use two to four colored-pencil hues per scene in addition to outlines and background; do not use the whole palette at once.
 Starting palette: petrol #247C74, muted sage #A7B8A0, sand #E7CC99, calm blue #789EB5, coral #D97662.
 Adapt accents to the lesson rather than assigning the same subject colors everywhere.
 Use color for a role or contrast and add labels or shapes so meaning never depends on color alone.
 Avoid gloss, heavy gradients, deep shadows, neon colors, 3D characters and cinematic backgrounds unless explicitly requested.
 Keep titles and important labels in Cairo; allow a meaningful word or label in an accent color with readable contrast.
-Use light paper texture or hatching only when it remains unobtrusive at the final resolution.
+Build color with visible directional pencil strokes, modest pressure variation and small areas of paper showing through. Keep the texture legible without obscuring labels or exact diagrams at final resolution; avoid uniform digital fills and airbrush gradients.
 
 ## Illustrations, characters and continuity
 
@@ -31,6 +31,7 @@ If image generation is used, inspect actual assets and preserve alpha where requ
 ## Concrete examples and composition
 
 Render the actual observable action promised by the script before moving to abstract representation.
+Give every instructional point and every example in the narration a drawing that explains its specific action or relation at the time it is taught. Map each point and example to its drawing and timestamp in the storyboard; a written sentence or generic icon alone does not count. If the duration is too short, reduce the teaching scope while preserving a meaningful drawing for each retained point and example.
 For a fence example, show a garden and fence boundary, trace the fence length, then simplify the same boundary into a measured rectangle.
 For grammar, depict the relevant event, then build the sentence while keeping the target relation visible.
 Use a focal illustration large enough to read, supporting details with clear hierarchy and generous whitespace.
@@ -43,7 +44,7 @@ Allow gentle controlled line irregularity only on illustrative outlines that do 
 ## Stroke drawing and typography
 
 Create vector paths or separated ink layers and reveal each stroke from start to end at roughly constant arc length with eased endpoints.
-Draw outlines first and add flat color fills after the relevant outline is built; avoid colored silhouettes appearing before their boundary when claiming pen drawing.
+Draw outlines first, then reveal colored-pencil shading through successive strokes inside the relevant form; avoid instant fills or colored silhouettes appearing before their boundary.
 Place the pen tip at the revealed endpoint; lift or hide it when moving between disconnected paths.
 Animate one drawing focus at a time; do not show multiple simultaneous pens for unrelated drawing and writing.
 Keep the pen or hand outside text during reading holds and hide it when drawing stops.
@@ -72,6 +73,7 @@ Prefer logical carryover and transformations between scenes to loud bounces or a
 Inspect exported frames during drawing, writing, coloring, transition, reading hold, question and answer.
 Check pen contact, absence of competing pens, readable Cairo, correct mixed directions, consistent characters and exact educational relations.
 Check that the concrete example is visible, each asset supports the learning objective and the abstract diagram preserves its relationship.
+Compare the exported video against the full script: for each explanatory point and example, record the matching drawing, its timestamp and a frame showing how it conveys the meaning. Fail the visual coverage check for any missing or merely decorative drawing.
 Check marks identify the right word, result or region and do not imply an answer too early.
 Use pass, fail, not_checked, or not_applicable with a concrete reason and evidence in qa.json.
 Do not claim finished visual or audio review from a storyboard, configuration or static-frame inspection alone.
@@ -96,7 +98,7 @@ Only add branding when explicitly requested for the current output; inspect the 
 Every visible semantic element must have a real stroke-drawing sequence on its first appearance: characters, faces, clothing, plants, fences, icons, exact diagrams, titles, labels, numbers, equations and explanatory marks.
 Do not exempt supporting illustrations or introduce completed characters beside an animated main diagram.
 Keep a per-element manifest with ink paths, reveal ordering, start/end times, outline completion, color-fill timing and exported review evidence.
-Trace ink paths with a single pen endpoint and lift it between disconnected paths. Reveal flat fills only after the corresponding outline.
+Trace ink paths with a single pen endpoint and lift it between disconnected paths. Reveal colored-pencil strokes only after the corresponding outline.
 A slide-in, fade-in, scale-up or rectangular wipe never satisfies this gate.
 A clean background may stay static. A finished element may hold, move or carry over once its first drawing has been shown.
 Use a wide tracked marker path for highlights instead of instant colored boxes.
