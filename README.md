@@ -41,8 +41,19 @@ git clone https://github.com/shariefabdelmonem-netizen/lesson-motion-studio.git
 cd lesson-motion-studio
 ```
 
-Commit source changes normally and use `git pull` to retrieve updates
-No re-zipping or re-uploading is needed for future edits
+Commit source changes normally. Local Codex and Claude Code users can opt into the updater below; it checks GitHub's main branch once a day and updates their installed skill copy automatically.
+
+```bash
+# Run from this repository after cloning it.
+python3 skills/lesson-motion-studio/scripts/auto_update.py install --install-dir ~/.codex/skills/lesson-motion-studio
+# For Claude Code, use ~/.claude/skills/lesson-motion-studio instead.
+```
+
+On Windows, run the same script with `py -3` and pass a full destination such as `%USERPROFILE%\.codex\skills\lesson-motion-studio` or `%USERPROFILE%\.claude\skills\lesson-motion-studio`.
+
+If a skill copy already exists, add `--replace` to the one-time install command. The updater saves the previous copy outside the active skills folder as a backup. It refuses later automatic updates if the installed files were edited locally. Use `check` for an immediate read-only version check, or `update` to apply a newer version immediately. Add `--no-daily` to install without the background schedule and run `enable-daily` later if wanted. Daily jobs run at 09:00 local time using launchd on macOS, Task Scheduler on Windows, or cron on Linux; the computer and scheduler must be available.
+
+This updater manages local skill directories only. A skill uploaded directly to ChatGPT or Claude web is a separate copy and cannot be silently replaced by GitHub. Publish a new version through the platform's skill or plugin management flow. Claude shared skills propagate their owner's updates at next use; independently uploaded copies do not inherit those changes. New sessions may be needed to load changed local skill instructions.
 
 The root `lesson-motion-studio.zip` is an optional original snapshot and is not automatically updated
 Use the source folder for the current version
